@@ -5,10 +5,10 @@ import datetime
 # import os
 def msg_sender(cntname, message):
     sel_contact(cntname)
-    gui.click(767, 816)
-    message=  message + '\n Automate BOT by SamX'
+    gui.click(767, 816) #(X,Y)
+    message=  message + '\n Automate BOT by MuhammadUsamaMX'
     gui.typewrite(message)  # message
-    gui.click(1466, 815)
+    gui.click(1466, 815) #(X,Y)
 
 def datetimechck(gdatetime):
     _time = False
@@ -27,31 +27,31 @@ def datetimechck(gdatetime):
 def file_sender(cntname,file,file_path):
     sel_contact(cntname)
     #click on attach
-    gui.click(604,813)
+    gui.click(604,813)#(X,Y)
     gui.sleep(1)
     #click on Doc
-    gui.click(590,596)
+    gui.click(590,596)#(X,Y)
     gui.sleep(1.5)
     #click on file_path
-    gui.click(629,165)
+    gui.click(629,165)#(X,Y)
     gui.hotkey('ctrl','a')
     gui.sleep(.2)
     gui.typewrite(file_path)
     gui.hotkey('enter')
     time.sleep(.2)
     #click on file_name
-    gui.click(724,580)    
+    gui.click(724,580)    #(X,Y)
     gui.typewrite(file)
-    gui.click(1104, 665)
+    gui.click(1104, 665)#(X,Y)
     #click on send
     time.sleep(.75)
-    gui.click(1421,713)
+    gui.click(1421,713)#(X,Y)
 
 def sel_contact(cntname):
     web.open("https://web.whatsapp.com/")
-    time.sleep(10) #temp change bcz slow network
+    time.sleep(10) #depend on network speed
     # # for searching contact
-    gui.click(253, 239)
+    gui.click(253, 239)#(X,Y)
     # # type contact name
     gui.typewrite(cntname)
     # click on contact
@@ -73,5 +73,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # time.sleep(5)
-    # os.system("pkill -KILL -u samx") # for logut samx user
